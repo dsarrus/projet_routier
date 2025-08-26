@@ -37,13 +37,13 @@ app.use(
 );
 
 // Servir les fichiers statics en production
-if (process.env.NODE_ENV === "production") {
+/*if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 
   app.get("/{*any}", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/build", "index.html"));
   });
-}
+}*/
 
 // Vérifier si le dossier uploads existe
 const uploadDir = process.env.FILE_UPLOAD_PATH;
