@@ -22,16 +22,8 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-// Configure CORS to allow requests from your local React development server
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL, // Replace with your React app's local URL if different
-    credentials: true, // If you're using cookies or sessions
-  })
-);
-
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
