@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 // Configuration CORS pour le déploiement
 const corsOptions = {
   origin:
-    process.env.NODE_ENV === process.env.ENVIRONMENT
+    process.env.NODE_ENV === "production"
       ? process.env.FRONTEND_URL || "http://localhost:3000"
       : "http://localhost:3000",
   credentials: true,
