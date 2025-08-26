@@ -1,8 +1,8 @@
-DB_HOST=ep-spring-rain-a82ydkse-pooler.eastus2.azure.neon.tech
+DB_HOST=localhost
 DB_PORT=5432
-DB_USER=neondb_owner
-DB_PASSWORD=npg_GpuUm37JbNKv
-DB_NAME=neondb
+DB_USER=postgres
+DB_PASSWORD=done2024
+DB_NAME=projet_routier
 JWT_SECRET=290720251425
 JWT_EXPIRES_IN=24h
 FILE_UPLOAD_PATH=./uploads
