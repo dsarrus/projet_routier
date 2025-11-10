@@ -190,3 +190,20 @@ table th {
   display: flex;
   gap: 10px;
 }
+
+/* map */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Styles pour les popups */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  font-family: 'Roboto', sans-serif;
+}

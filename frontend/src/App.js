@@ -10,6 +10,9 @@ import LotDashboard from "./components/lots/LotDashboard";
 import DocumentsTab from "./components/documents/DocumentsTab"; // Remplace Documents
 import DocumentDetails from "./components/documents/DocumentDetails";
 import UserManagement from "./components/admin/UserManagement";
+import InteractiveMap from "./components/map/InteractiveMap";
+import AdminDashboard from "./components/admin/AdminDashboard";
+import ReportsPage from "./components/pages/ReportsPage";
 
 function App() {
   return (
@@ -50,7 +53,26 @@ function App() {
                     )
                   }
                 />
-
+                <Route
+                  path="/carte"
+                  element={
+                    auth.isAuthenticated ? (
+                      <InteractiveMap />
+                    ) : (
+                      <Navigate to="/login" />
+                    )
+                  }
+                />
+                <Route
+                  path="/rapports"
+                  element={
+                    auth.isAuthenticated ? (
+                      <ReportsPage />
+                    ) : (
+                      <Navigate to="/login" />
+                    )
+                  }
+                />
                 {/* Routes pour les lots */}
                 <Route
                   path="/lots/:id"
@@ -86,7 +108,7 @@ function App() {
                   path="/admin"
                   element={
                     auth.isAuthenticated && auth.user.role === "admin" ? (
-                      <UserManagement />
+                      <AdminDashboard />
                     ) : (
                       <Navigate to="/login" />
                     )

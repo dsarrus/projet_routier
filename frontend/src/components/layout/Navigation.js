@@ -11,14 +11,14 @@ const Navigation = () => {
     <nav className="main-navigation">
       <div className="nav-container">
         <Link to="/" className="nav-brand">
-          Gestion des Lots Routiers
+          MSV + MROR
         </Link>
 
         <div className="nav-links">
           {isAuthenticated ? (
             <>
               <NavLink to="/" className="nav-link">
-                Tous les Lots
+                Accueil
               </NavLink>
               {user && user.role === "admin" && (
                 <NavLink to="/admin" className="nav-link">

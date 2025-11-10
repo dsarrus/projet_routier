@@ -75,6 +75,7 @@ app.use((req, res, next) => {
 // Routes
 const authenticate = require("./middleware/authenticate")(pool);
 app.use("/api/auth", require("./routes/auth")(pool, authenticate));
+app.use("/api/admin", require("./routes/admin")(pool));
 app.use("/api/admin/users", require("./routes/admin/users")(pool));
 app.use("/api/logs", require("./routes/logs")(pool));
 app.use("/api/lots", require("./routes/lots")(pool));
@@ -84,6 +85,7 @@ app.use("/api/users", require("./routes/users")(pool));
 app.use("/api/activities", require("./routes/activities")(pool, authenticate));
 app.use("/api/meetings", require("./routes/meetings")(pool));
 app.use("/api/communications", require("./routes/communications")(pool));
+app.use("/api/map", require("./routes/map")(pool));
 
 // Gestion des erreurs
 // Gestion améliorée des erreurs

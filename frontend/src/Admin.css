@@ -1,0 +1,24 @@
+.admin-dashboard {
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.admin-stat-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.map-management-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-progress-bar {
+    border-radius: 4px;
+    height: 8px;
+    transition: width 0.3s ease;
+}
